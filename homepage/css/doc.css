@@ -1,0 +1,163 @@
+/* HTML tags formatting */
+body {
+    background-color: black;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    animation: fadeIn 3s;
+}
+
+iframe {
+    width: 70%;
+    height: 30rem;
+    margin-top: 2rem;
+}
+
+p[id="title"] {
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    font-family: Copperplate;
+    margin-top: 1rem;
+}
+
+button,
+input[type="submit"] {
+    background-color: #F6F4ED;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 1.5rem 3rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 12rem;
+    margin-left: 5rem;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 3s;
+    font-family: Copperplate;
+    margin-bottom: 1rem;
+}
+
+button[type="button"]:hover,
+input[type="submit"]:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #A71313;
+
+}
+
+
+p[class="img-text"] {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    font-family: Copperplate;
+    margin-top: 1rem;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+p[id="more"] {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    font-family: Copperplate;
+    margin-top: 1rem;
+}
+
+/* HTML classes formatting */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'menu'
+        'header'
+        'video'
+        'footer';
+    gap: 10px;
+    padding: 10px;
+}
+
+.header {
+    grid-area: header;
+    border-bottom-style: solid;
+    border-bottom-color: #A71313;
+    border-top-style: solid;
+    border-top-color: #A71313;
+}
+
+
+
+.menu {
+    grid-area: menu;
+    margin-top: 1rem;
+    max-width: 100%;
+    border-bottom-style: solid;
+    border-bottom-color: #A71313;
+    text-align: center;
+}
+
+.video {
+    border-top-style: solid;
+    border-top-color: #A71313;
+    text-align: center;
+}
+
+.grid-more {
+    display: grid;
+    grid-template-areas:
+        'what-ethereum what-eth get-eth';
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+.what-ethereum {
+    grid-area: what-ethereum;
+}
+
+.what-ethereum:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #A71313;
+}
+
+.what-eth {
+    grid-area: what-eth;
+}
+
+.what-eth:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #A71313;
+}
+
+.get-eth {
+    grid-area: get-eth;
+}
+
+.get-eth:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #A71313;
+}
+
+
+.more {
+    border-top: 2rem;
+}
+
+/* Page effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

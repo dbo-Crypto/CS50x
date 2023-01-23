@@ -1,0 +1,13 @@
+sort1 uses: BUBBLE SORT
+
+How do you know?: Not efficient for high volumes of random and reversed dataset. However, good result for high volume sorted data set because
+Bubble Sort will only have to pass through the dataset once.
+
+sort2 uses: MERGE SORT
+
+How do you know?: Most efficient in all the cases. Probably used recursively.
+
+sort3 uses: SELECTION SORT
+
+How do you know?: Runtime increases exponentially as the volume increases. Even if the dataset is already sorted, it needs to scan all the
+data set n times.

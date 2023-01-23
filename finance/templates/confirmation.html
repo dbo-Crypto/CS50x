@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Confirmation
+{% endblock %}
+
+{% block main %}
+<h2 text-align="center">New account created</h2>
+<form action="/login" method="get">
+  <button class="btn btn-primary" type="submit">Back to login</button>
+</form>
+{% endblock %}

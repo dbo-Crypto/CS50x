@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+                // TODO: Add code to check answers to questions
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <!-- TODO: Add multiple choice question here -->
+            <h3>Which team won the 2022 soccer World cup?</h3>
+            <div id="radiobutton">
+
+                <input type="submit" id="Brazil" name="winner" value="Brazil">
+                <input type="submit" id="France" name="winner" value="France">
+                <input type="submit" id="Croatia" name="winner" value="Croatia">
+                <input type="submit" id="Argentina" name="winner" value="Argentina">
+            </div>
+        </div>
+        <script>
+
+            let radios = document.querySelectorAll('input[name="winner"]');
+
+            for (let radio of radios) {
+                radio.onclick = (e) => {
+                    if (e.target.value == "Argentina") {
+                        e.target.style.backgroundColor = 'LimeGreen';
+                        let text = document.createTextNode("Correct!");
+                        let span = document.createElement("span");
+                        span.appendChild(text);
+                        let currentDiv = document.getElementById("radiobutton");
+                        currentDiv.after(span);
+                        span.style = "color:LimeGreen";
+
+                    }
+                    else {
+                        e.target.style.backgroundColor = 'Crimson';
+                        let text = document.createTextNode("Incorrect");
+                        let span = document.createElement("span");
+                        span.appendChild(text);
+                        let currentDiv = document.getElementById("radiobutton");
+                        currentDiv.after(span);
+                        span.style = "color:Crimson";
+                    }
+                }
+            }
+        </script>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <!-- TODO: Add free response question here -->
+            <h3>Who was the player of the tournament?</h3>
+            <form id="form">
+                <input autocomplete="off" autofocus name="player" id="player" placeholder="Player family name..."
+                    type="text">
+                <button id="submit">Submit</button>
+            </form>
+
+            <script>
+                let field = document.querySelector('input[name="player"]')
+                document.querySelector('form').addEventListener('submit', function (e) {
+                    let name = document.querySelector('#player').value;
+                    if (name.toLowerCase() == ("mbappe") || name.toLowerCase() == ("mbappé")) {
+                        field.style.backgroundColor = 'LimeGreen';
+                        let text = document.createTextNode("Correct!");
+                        let span = document.createElement("span");
+                        span.appendChild(text);
+                        let currentDiv = document.getElementById("form");
+                        currentDiv.after(span);
+                        span.style = "color:LimeGreen";
+                    }
+                    else {
+                        field.style.backgroundColor = 'Crimson';
+                        let text = document.createTextNode("Incorrect");
+                        let span = document.createElement("span");
+                        span.appendChild(text);
+                        let currentDiv = document.getElementById("form");
+                        currentDiv.after(span);
+                        span.style = "color:Crimson";
+                    }
+                    e.preventDefault();
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

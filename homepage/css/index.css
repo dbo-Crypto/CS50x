@@ -1,0 +1,106 @@
+/* CSS formatting for HTML tags */
+body {
+  background-color: black;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: auto;
+}
+
+
+button,
+input[type="button"] {
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 1.5rem 3rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 12rem;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 3s;
+  font-family: Copperplate;
+  text-decoration: underline solid orange;
+}
+
+button[type="button"]:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #A71313;
+}
+
+img[id="logo"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  animation: fadeIn 3s;
+}
+
+p {
+  color: white;
+  animation: fadeIn 3s;
+  font-family: Copperplate;
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p[id="sound"] {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* CSS formatting for HTML class */
+.txtenter {
+  text-align: center;
+  color: white;
+  margin-top: 5%;
+}
+
+.enterButton {
+  width: 100%;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  grid-area: logo;
+  margin-top: 1rem;
+}
+
+.grid-container-logo {
+  display: grid;
+  grid-template-areas:
+    'logo'
+    'txtenter'
+    'enterButton';
+  gap: 10px;
+  padding: 7px;
+}
+
+/* CSS formatting for page effects */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
